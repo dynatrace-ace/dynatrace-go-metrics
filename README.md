@@ -37,18 +37,18 @@ set DT_METRICSLIST=documents.processed.success,documenttype="Mortgages" 3#!#!#do
 Using Default Delimiter (`#`)
 
 ```
-set DT_BASEURL=https://***.live.dynatrace.com
-set DT_APITOKEN=***
-set DT_METRICSLIST=documents.processed.success,documenttype="Mortgages" 3#documents.processed.success,documenttype="Loans" 143
+export DT_BASEURL=https://***.live.dynatrace.com
+export DT_APITOKEN=***
+export DT_METRICSLIST=documents.processed.success,documenttype="Mortgages" 3#documents.processed.success,documenttype="Loans" 143
 ./bin/linux/dt-send-metrics-x64
 ```
 
 ### Linux: Use Custom Delimiter
 ```
-set DT_DELIMITER=#!#!#
-set DT_BASEURL=https://***.live.dynatrace.com
-set DT_APITOKEN=***
-set DT_METRICSLIST=documents.processed.success,documenttype="Mortgages" 3#!#!#documents.processed.success,documenttype="Loans" 143
+export DT_DELIMITER=#!#!#
+export DT_BASEURL=https://***.live.dynatrace.com
+export DT_APITOKEN=***
+export DT_METRICSLIST=documents.processed.success,documenttype="Mortgages" 3#!#!#documents.processed.success,documenttype="Loans" 143
 ./bin/linux/dt-send-metrics-x64
 ```
 
