@@ -6,7 +6,7 @@ Create an API token with `API v2: Ingest Metrics` permissions
 
 ## Custom Metric Format
 
-Custom metrics take teh following format: `metric key,dimension splitting key=value SPACE value to push`. You receive a new datapoint for each metric dimension.
+Custom metrics take the following format: `metric key,dimension splitting key=value SPACE value to push`. You receive a new datapoint for each metric dimension.
 
 For example, if a metric had a `key` of `batchjobs.myjob` and you'd like to pass dimensions with that metric:
 
