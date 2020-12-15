@@ -4,6 +4,18 @@ Go binary makes it easy to push custom metrics into Dynatrace.
 ## API Token
 Create an API token with `API v2: Ingest Metrics` permissions
 
+## Custom Metric Format
+
+Custom metrics take teh following format: `metric key,dimension splitting key=value SPACE value to push`. You receive a new datapoint for each metric dimension.
+
+For example, if a metric had a `key` of `batchjobs.myjob` and you'd like to pass dimensions with that metric:
+
+```
+batchjobs.myjob,results="Status" 1
+batchjobs.myjob,results="Time" 123
+batchjobs.myjob,results="Rows Processed" 40000
+```
+
 ## Usage
 
 Push multiple metrics using the [line protocol](https://www.dynatrace.com/support/help/how-to-use-dynatrace/metrics/metric-ingestion/metric-ingestion-protocol/). Split each metric with a delimiter.
